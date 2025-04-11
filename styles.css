@@ -278,6 +278,11 @@ header {
     color: #d84315;
 }
 
+.premium{
+    background-color: #7800af91;
+    color: #ffffff;
+}
+
 .dark-mode .beginner {
     background-color: rgba(2, 119, 189, 0.2);
     color: #64b5f6;
@@ -698,6 +703,38 @@ footer {
     vertical-align: middle;
   }
   
+
+  /* Dark mode styles - applied when body has .dark-theme class */
+.dark-mode .modal-content {
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.765);
+}
+
+.dark-mode .modal-title {
+    color: #f0f0f0;
+    border-bottom-color: #333;
+}
+
+.dark-mode .part-link {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+}
+
+.dark-mode .part-link:hover {
+    background-color: #3d3d3d;
+}
+
+.dark-mode .download-icon {
+    color: #5c9aff; /* Slightly lighter blue for dark mode */
+}
+
+.dark-theme .close-btn {
+    background-color: #5c9aff;
+}
+
+.dark-theme .close-btn:hover {
+    background-color: #4285F4;
+}
 
 
 /* Mobile responsive styles */
