@@ -1,20 +1,243 @@
-
-// Toggle mobile menu
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const navLinks = document.getElementById('navLinks');
-
-mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-
-    // Change hamburger icon to X when menu is open
-    const icon = mobileMenuBtn.querySelector('i');
-    if (navLinks.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
+// Wait for DOM to load before running script
+document.addEventListener('DOMContentLoaded', function() {
+  // Define the course data container
+  let courseData = [];
+  
+  // Fetch courses from JSON file
+  async function loadCourses() {
+    try {
+      console.log('Loading courses...');
+      const response = await fetch('courses-data.json');
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      console.log('Courses loaded:', data);
+      courseData = data.courses;
+      renderCourses();
+      return true;
+    } catch (error) {
+      console.error('Error loading courses:', error);
+      document.querySelector('.featured-courses').innerHTML = 
+        '<p class="error-message">Failed to load courses. Please refresh the page or try again later.</p>';
+      return false;
     }
+  }
+  
+  // Render courses to the DOM
+  function renderCourses(coursesToRender = courseData) {
+    console.log('Rendering courses:', coursesToRender);
+    const coursesContainer = document.querySelector('.featured-courses');
+    
+    // Check if container exists
+    if (!coursesContainer) {
+      console.error('Could not find .featured-courses container in the DOM');
+      return;
+    }
+    
+    // Clear existing courses
+    coursesContainer.innerHTML = '';
+    
+    if (coursesToRender.length === 0) {
+      coursesContainer.innerHTML = '<p class="no-results">No courses match your search criteria.</p>';
+      return;
+    }
+    
+    // Add each course
+    coursesToRender.forEach(course => {
+      // Create course card element
+      const courseCard = document.createElement('div');
+      courseCard.className = 'course-card';
+      courseCard.setAttribute('data-category', course.category);
+      
+      // Generate download button
+      let actionButton = '';
+      if (course.comming_soon) {
+        actionButton = `<img src="newbadge.png" alt="New Course" width="58" height="55" style="margin-left: 25px;">`;
+      } else if (course.parts && course.parts.length > 0) {
+        const partsJson = JSON.stringify(course.parts).replace(/"/g, '&quot;');
+        actionButton = `<a href="#" class="download-btn" data-parts='${partsJson}'>Download</a>`;
+      }
+
+
+      // Generate the new Badge
+        
+      let new_badge = '';
+      if (course.is_new){
+        new_badge = `<img src="new_badge.png" alt="newbadge" style="z-index: 1; position: absolute; margin-top: -7.5rem; margin-right: -18rem; width: 50px;">`;
+      }
+      console.log("Is course new?", course.is_new, typeof course.is_new);
+
+
+      // Handle levels (can have multiple)
+      let levelBadges = '';
+      if (course.level) {
+        const levels = course.level.split(' ');
+        levels.forEach(level => {
+          if (level) {
+            const levelLower = level.toLowerCase();
+            let badgeText;
+            
+            // Determine the display text for each badge type
+            if (levelLower === 'bestseller') {
+              badgeText = 'Bestseller';
+            } else if (levelLower === 'premium') {
+              badgeText = 'Premium';
+            } else if (levelLower === 'advanced') {
+              badgeText = 'Advanced';
+            } else {
+              badgeText = level; // Use original text for any other level
+            }
+            
+            levelBadges += `<span class="course-level ${levelLower}">${badgeText}</span>`;
+          }
+        });
+      }
+      
+      // Create course HTML structure
+      courseCard.innerHTML = `
+        <div class="course-image">
+          <img alt="${course.title}" src="${course.image}" style="height: 13rem;" />
+          ${new_badge}
+        </div>
+        <div class="course-content">
+          <h3 class="course-title">${course.title}</h3>
+          <p class="course-description">${course.description}</p>
+          <div class="course-meta">
+            <div class="course-tech">
+              <span style="font-weight: bold;">Created by:-</span>
+              <span class="creator-name">${course.creator}</span>
+            </div>
+            ${levelBadges}
+          </div>
+          <div class="course-actions">
+            ${actionButton}
+            <div class="share-btns">
+              <span class="course-size">Total Size: ${course.totalSize}</span>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      // Add the course card to the container
+      coursesContainer.appendChild(courseCard);
+    });
+    
+    // Attach event listeners for download buttons
+    attachDownloadEventListeners();
+  }
+  
+  // Attach event listeners to download buttons
+  function attachDownloadEventListeners() {
+    const downloadButtons = document.querySelectorAll('.download-btn');
+    const modal = document.getElementById('myModal');
+    const closeBtn = document.querySelector('.close');
+    const downloadParts = document.getElementById('downloadParts');
+    
+    if (!modal || !downloadParts) {
+      console.error('Modal elements not found in the DOM');
+      return;
+    }
+    
+    downloadButtons.forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const parts = JSON.parse(this.getAttribute('data-parts'));
+        
+        // Clear previous content
+        downloadParts.innerHTML = '';
+        
+        // Add each part
+        parts.forEach(part => {
+          const partLink = document.createElement('a');
+          partLink.href = part.link;
+          partLink.className = 'part-link';
+          partLink.target = '_blank';
+          partLink.innerHTML = `${part.name} (${part.size})`;
+          downloadParts.appendChild(partLink);
+        });
+        
+        // Show modal
+        modal.style.display = 'block';
+      });
+    });
+    
+    // Close modal on X click
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+    }
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+  
+  // Filter courses by search query
+  function filterCourses(query) {
+    if (!query) {
+      renderCourses();
+      return;
+    }
+    
+    const filteredCourses = courseData.filter(course => {
+      return (
+        course.title.toLowerCase().includes(query.toLowerCase()) ||
+        course.description.toLowerCase().includes(query.toLowerCase()) ||
+        course.creator.toLowerCase().includes(query.toLowerCase()) ||
+        course.category.toLowerCase().includes(query.toLowerCase())
+      );
+    });
+    
+    renderCourses(filteredCourses);
+  }
+  
+  // Filter courses by category
+  function filterCoursesByCategory(category) {
+    if (category === 'all') {
+      renderCourses();
+      return;
+    }
+    
+    const filteredCourses = courseData.filter(course => course.category === category);
+    renderCourses(filteredCourses);
+  }
+  
+  // Initialize everything
+  
+  // Load courses from JSON file
+  loadCourses();
+  
+  // Setup search functionality
+  const searchInput = document.getElementById('courseSearch');
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      filterCourses(this.value);
+    });
+  } else {
+    console.error('Could not find #courseSearch element in the DOM');
+  }
+  
+  // Setup category filter buttons
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      // Filter courses
+      const category = this.getAttribute('data-filter');
+      filterCoursesByCategory(category);
+    });
+  });
 });
 
 // Dark mode toggle
@@ -37,173 +260,10 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('darkMode', isDarkMode);
 });
 
-// Check for saved theme preference
-const savedDarkMode = localStorage.getItem('darkMode');
-if (savedDarkMode === 'true') {
-    document.body.classList.add('dark-mode');
-    const icon = themeToggle.querySelector('i');
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-}
 
-// Filter courses by category
-const categoryBtns = document.querySelectorAll('.category-btn');
-const courseCards = document.querySelectorAll('.course-card');
+// Loader 
 
-categoryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        // Remove active class from all buttons
-        categoryBtns.forEach(b => b.classList.remove('active'));
-        // Add active class to clicked button
-        btn.classList.add('active');
-
-        const filter = btn.getAttribute('data-filter');
-
-        courseCards.forEach(card => {
-            if (filter === 'all') {
-                card.style.display = 'block';
-            } else {
-                const categories = card.getAttribute('data-category').split(' ');
-                if (categories.includes(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            }
-        });
-    });
-});
-
-// Search functionality
-const searchInput = document.getElementById('courseSearch');
-
-searchInput.addEventListener('keyup', () => {
-    const searchTerm = searchInput.value.toLowerCase();
-
-    courseCards.forEach(card => {
-        const title = card.querySelector('.course-title').textContent.toLowerCase();
-        const description = card.querySelector('.course-description').textContent.toLowerCase();
-
-        if (title.includes(searchTerm) || description.includes(searchTerm)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-});
-
-// Modal for download parts
-const modal = document.getElementById("myModal");
-const downloadBtns = document.querySelectorAll('.download-btn');
-const downloadPartsDiv = document.getElementById("downloadParts");
-const closeModal = document.getElementsByClassName("close")[0];
-
-downloadBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const parts = JSON.parse(btn.getAttribute('data-parts'));
-        downloadPartsDiv.innerHTML = ''; // Clear previous content
-
-        parts.forEach(part => {
-            const partDiv = document.createElement('div');
-            partDiv.innerHTML = `<a href="${part.link}">${part.name} (${part.size})</a>`;
-            downloadPartsDiv.appendChild(partDiv);
-        });
-
-        modal.style.display = "block";
-    });
-});
-
-closeModal.onclick = function () {
-    modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-
-        // Close mobile menu if open
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-    });
-});
-
-//// 
-
-// Get the modal
-const modal_1 = document.getElementById("modal");
-const downloadParts = document.getElementById("downloadParts");
-const closeBtn = document.getElementsByClassName("close")[0];
-
-// Get all download buttons with data-parts attribute
-const downloadbtn = document.querySelectorAll('.download-btn[data-parts]');
-
-// Add click event to all download buttons with parts
-downloadbtn.forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Get parts data from the data-parts attribute
-        const partsData = JSON.parse(this.getAttribute('data-parts'));
-        if (partsData && partsData.length > 0) {
-            
-            // Clear previous content
-            downloadParts.innerHTML = '';
-            
-            // Create links for each part
-            partsData.forEach(part => {
-                const partLink = document.createElement('a');
-                partLink.href = part.link;
-                partLink.target = "_blank"; // This makes the link open in a new tab
-                partLink.className = 'part-link';
-                
-                // Create text span for the part name and size
-                const textSpan = document.createElement('span');
-                textSpan.textContent = `${part.name}`;
-                if (part.size) {
-                    textSpan.textContent += ` (${part.size})`;
-                }
-                
-                // Create download icon
-                const downloadIcon = document.createElement('i');
-                downloadIcon.className = 'fas fa-download download-icon';
-                
-                // Add text and icon to the link
-                partLink.appendChild(textSpan);
-                partLink.appendChild(downloadIcon);
-                
-                downloadParts.appendChild(partLink);
-            });
-            
-            // Show the modal
-            modal_1.style.display = "block";
-        }
-    });
-});
-
-// Close the modal when clicking on the close button
-closeBtn.addEventListener('click', function() {
-    modal_1.style.display = "none";
-});
-
-// Close the modal when clicking outside of it
-window.addEventListener('click', function(event) {
-    if (event.target == modal_1) {
-        modal_1.style.display = "none";
-    }
-});
+window.addEventListener('load', function() {
+    // When page is fully loaded, hide the loader
+    document.getElementById('loaderContainer').classList.add('hidden');
+  });
