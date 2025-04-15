@@ -226,6 +226,7 @@ header {
     font-size: 20px;
     margin-bottom: 10px;
     color: var(--text-dark);
+    
 }
 
 .dark-mode .course-title {
@@ -305,7 +306,7 @@ header {
     margin-top: 20px;
 }
 
-.enroll-btn, .download-btn {
+.enroll-btn, .download-btn,.submit-btn {
     background-color: var(--primary-color);
     color: white;
     padding: 8px 16px;
@@ -315,7 +316,7 @@ header {
     transition: var(--transition);
 }
 
-.enroll-btn:hover, .download-btn:hover {
+.enroll-btn:hover, .download-btn:hover, .submit-btn:hover {
     background-color: var(--secondary-color);
 }
 
@@ -366,8 +367,9 @@ header {
 }
 
 .dark-mode .category-btn {
-    background-color: var(--dark-card);
-    border-color: #333;
+    background-color: #1e1e1e;
+    border-color: #000000;
+    color: #ffffff96;
 }
 
 .category-btn:hover,
@@ -582,9 +584,7 @@ footer {
     transition: var(--transition);
 }
 
-.contact-form button:hover {
-    background-color: var(--accent-color);
-}
+
 
 .footer-bottom {
     text-align: center;
@@ -705,7 +705,7 @@ footer {
   
 
   /* Dark mode styles - applied when body has .dark-theme class */
-.dark-mode .modal-content {
+.dark-mode .f-content {
     background-color: #000000;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.765);
 }
@@ -774,7 +774,48 @@ footer {
   }
   
  
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    /* background-color: #ffffff; */
+    color: #000000;
+    padding: -0.25rem 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+  }
 
+  .marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+  }
+  
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .marquee-container {
+      font-size: 0.9rem;
+    }
+  }
+
+  
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {

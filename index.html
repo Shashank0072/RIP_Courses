@@ -7,11 +7,12 @@
     <title>RIP Courses | Free Udemy Courses & Online Learning</title>
     <meta name="description"
         content="Access premium Udemy courses for free. RIP Courses provides a curated collection of online courses in programming, design, business, and more to advance your skills.">
-    <meta name="keywords" content="free udemy courses, online learning, free courses, programming courses, web development, design courses, business courses, udemy coupons">
-    
+    <meta name="keywords"
+        content="free udemy courses, online learning, free courses, programming courses, web development, design courses, business courses, udemy coupons">
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://ripcourses.com">
-    
+
     <!-- Open Graph tags for better social sharing -->
     <meta property="og:title" content="RIP Courses | Free Udemy Courses & Online Learning">
     <meta property="og:description"
@@ -20,13 +21,14 @@
     <meta property="og:url" content="https://ripcourses.com">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="RIP Courses">
-    
+
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="RIP Courses | Free Udemy Courses">
-    <meta name="twitter:description" content="Access premium Udemy courses for free. Learn programming, design, business & more.">
+    <meta name="twitter:description"
+        content="Access premium Udemy courses for free. Learn programming, design, business & more.">
     <meta name="twitter:image" content="/api/placeholder/1200/630">
-    
+
     <!-- Structured data for courses website -->
     <script type="application/ld+json">
     {
@@ -41,7 +43,7 @@
       }
     }
     </script>
-    
+
     <!-- Structured data specifically for courses -->
     <script type="application/ld+json">
     {
@@ -63,9 +65,9 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" href="main_icon.png" type="image/x-icon" >
+    <link rel="icon" href="main_icon.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    
+
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
 
@@ -76,7 +78,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap"
         rel="stylesheet">
-        
+
     <!-- Meta tags for better indexing -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="RIP Courses">
@@ -103,24 +105,33 @@
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
-                    
+
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="loader-container" id="loaderContainer">
-        <div class="loader"></div>
+        <div class="loader">
+
         </div>
-      
+    </div>
+
 
     <section class="hero" id="home">
         <div class="container">
             <h1>Access Premium Udemy Courses for Free</h1>
-            <p>Discover top-rated courses in programming, design, business, and more without paying a penny. Advance your skills with RIP Courses.</p>
+            <p>Discover top-rated courses in programming, design, business, and more without paying a penny. Advance
+                your skills with RIP Courses.</p>
             <a href="#courses" class="cta-button">Explore Courses</a>
         </div>
     </section>
+    <div class="marquee-container">
+        <div class="marquee-content">
+          <span>📦 For Extracting the Course, Please use WinRAR Software.</span>
+        </div>
+      </div>
+      
     <section class="section" id="courses">
         <div class="container">
             <h2 class="section-title">Our Course Library</h2>
@@ -132,27 +143,35 @@
                 </button>
             </div>
 
-            <!-- <div class="course-categories">
+            <div class="course-categories">
                 <button class="category-btn active" data-filter="all">All</button>
+                <button class="category-btn" data-filter="ai">AI</button>
                 <button class="category-btn" data-filter="selenium">Selenium</button>
                 <button class="category-btn" data-filter="java">Java</button>
-                <button class="category-btn" data-filter="api">API Testing</button>
-                <button class="category-btn" data-filter="cypress">Cypress</button>
-                <button class="category-btn" data-filter="testng">TestNG</button>
-                <button class="category-btn" data-filter="appium">Appium</button>
-            </div> -->
+                <button class="category-btn" data-filter="python">Python</button>
+                <button class="category-btn" data-filter="devops">DevOps</button>
+                <button class="category-btn" data-filter="appium">Cypress</button>
+                <button class="category-btn" data-filter="testing">Testing</button>
+                <button class="category-btn" data-filter="UI-UX">UI-UX</button>
+                <button class="category-btn" data-filter="playwright">Playwright</button>
+
+            </div>
 
             <div class="featured-courses">
                 <script src="courses-manager.js"></script>
                 <script src="script.js"></script>
             </div>
-             
-        
+            <!-- Loader shown during infinite scroll -->
+            <div id="scrollLoader" class="hidden">
+                <img src="loader_g.gif" alt="Loading..." style="margin-left: 32rem;" />
+            </div>
+
+
         </div>
     </section>
 
     <!-- Modal for Download Links -->
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" style="background-color: rgba(20, 20, 20, 0.9);">
         <div class="modal-content">
             <button class="close" style="margin-left: 19rem;">X</button>
             <h2>Download Parts</h2>
@@ -192,9 +211,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>TestAutomation Hub</h3>
-                    <p>Your go-to resource for free test automation learning. Access high-quality courses, tutorials,
-                        and resources to boost your career.</p>
+                    <h3>RIP Courses</h3>
+                    <p>🎓 Your go-to resource for free learning — access high-quality courses, tutorials, and resources to boost your career!</p>
                     <!-- <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -216,28 +234,36 @@
                     </ul>
                 </div>
 
-                <div class="footer-column contact-info">
+                <!-- <div class="footer-column contact-info">
                     <h3>Contact Us</h3>
                     <p><i class="fas fa-envelope"></i>tradeindai3@gmail.com</p>
-                    <!-- <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p> -->
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
                     <p><i class="fas fa-map-marker-alt"></i> 27 Course Street, Automation City</p>
-                </div>
-
-                <!-- <div class="footer-column">
-                    <h3>Send a Message</h3>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="3" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit">Send Message</button>
-                    </form>
                 </div> -->
+
+                <div class="footer-column">
+                    <h3>Send a Message</h3>
+                    <form id="contact-form" action="https://formspree.io/f/mnnjvjeo" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <div class="form-row">
+                                <div class="col">
+                                    <input type="text" name="name" id="name" class="form-control"
+                                        placeholder="Full Name" required>
+                                </div>
+                                <div class="col" style="margin-top: 1rem;">
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        placeholder="Email Address" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" class="form-control" name="message" id="message"
+                                rows="10" required style="height: 6rem;
+                            "></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
             </div>
 
             <div class="footer-bottom">

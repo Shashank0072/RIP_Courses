@@ -1,108 +1,79 @@
-// Wait for DOM to load before running script
-document.addEventListener('DOMContentLoaded', function() {
-  // Define the course data container
+document.addEventListener('DOMContentLoaded', function () {
   let courseData = [];
-  
-  // Fetch courses from JSON file
+  let filteredCoursesData = [];
+  let currentPage = 1;
+  const itemsPerPage = 9;
+  let isLoadingMore = false;
+
   async function loadCourses() {
     try {
-      console.log('Loading courses...');
       const response = await fetch('courses-data.json');
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const data = await response.json();
-      console.log('Courses loaded:', data);
       courseData = data.courses;
+      filteredCoursesData = courseData; // Start with full dataset
       renderCourses();
-      return true;
     } catch (error) {
-      console.error('Error loading courses:', error);
-      document.querySelector('.featured-courses').innerHTML = 
+      document.querySelector('.featured-courses').innerHTML =
         '<p class="error-message">Failed to load courses. Please refresh the page or try again later.</p>';
-      return false;
     }
   }
-  
-  // Render courses to the DOM
-  function renderCourses(coursesToRender = courseData) {
-    console.log('Rendering courses:', coursesToRender);
+
+  function renderCourses(append = false) {
     const coursesContainer = document.querySelector('.featured-courses');
-    
-    // Check if container exists
-    if (!coursesContainer) {
-      console.error('Could not find .featured-courses container in the DOM');
-      return;
+    if (!coursesContainer) return;
+
+    if (!append) {
+      coursesContainer.innerHTML = '';
+      currentPage = 1;
     }
-    
-    // Clear existing courses
-    coursesContainer.innerHTML = '';
-    
-    if (coursesToRender.length === 0) {
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const end = start + itemsPerPage;
+    const paginatedCourses = filteredCoursesData.slice(start, end);
+
+    if (!append && paginatedCourses.length === 0) {
       coursesContainer.innerHTML = '<p class="no-results">No courses match your search criteria.</p>';
       return;
     }
-    
-    // Add each course
-    coursesToRender.forEach(course => {
-      // Create course card element
+
+    paginatedCourses.forEach(course => {
       const courseCard = document.createElement('div');
       courseCard.className = 'course-card';
       courseCard.setAttribute('data-category', course.category);
-      
-      // Generate download button
+
       let actionButton = '';
       if (course.comming_soon) {
         actionButton = `<img src="newbadge.png" alt="New Course" width="58" height="55" style="margin-left: 25px;">`;
-      } else if (course.parts && course.parts.length > 0) {
+      } else if (course.parts?.length > 0) {
         const partsJson = JSON.stringify(course.parts).replace(/"/g, '&quot;');
         actionButton = `<a href="#" class="download-btn" data-parts='${partsJson}'>Download</a>`;
       }
 
-
-      // Generate the new Badge
-        
       let new_badge = '';
-      if (course.is_new){
+      if (course.is_new) {
         new_badge = `<img src="new_badge.png" alt="newbadge" style="z-index: 1; position: absolute; margin-top: -7.5rem; margin-right: -18rem; width: 50px;">`;
       }
-      console.log("Is course new?", course.is_new, typeof course.is_new);
 
-
-      // Handle levels (can have multiple)
       let levelBadges = '';
       if (course.level) {
         const levels = course.level.split(' ');
         levels.forEach(level => {
-          if (level) {
-            const levelLower = level.toLowerCase();
-            let badgeText;
-            
-            // Determine the display text for each badge type
-            if (levelLower === 'bestseller') {
-              badgeText = 'Bestseller';
-            } else if (levelLower === 'premium') {
-              badgeText = 'Premium';
-            } else if (levelLower === 'advanced') {
-              badgeText = 'Advanced';
-            } else {
-              badgeText = level; // Use original text for any other level
-            }
-            
-            levelBadges += `<span class="course-level ${levelLower}">${badgeText}</span>`;
-          }
+          const levelLower = level.toLowerCase();
+          const badgeText = levelLower === 'bestseller' ? 'Bestseller' :
+            levelLower === 'premium' ? 'Premium' :
+              levelLower === 'advanced' ? 'Advanced' : level;
+          levelBadges += `<span class="course-level ${levelLower}">${badgeText}</span>`;
         });
       }
-      
-      // Create course HTML structure
+
       courseCard.innerHTML = `
         <div class="course-image">
           <img alt="${course.title}" src="${course.image}" style="height: 13rem;" />
           ${new_badge}
         </div>
         <div class="course-content">
-          <h3 class="course-title">${course.title}</h3>
+          <h3 class="course-title">${truncateTextByChars(course.title, 54)}</h3>
           <p class="course-description">${course.description}</p>
           <div class="course-meta">
             <div class="course-tech">
@@ -119,36 +90,25 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
       `;
-      
-      // Add the course card to the container
       coursesContainer.appendChild(courseCard);
     });
-    
-    // Attach event listeners for download buttons
+
     attachDownloadEventListeners();
   }
-  
-  // Attach event listeners to download buttons
+
   function attachDownloadEventListeners() {
     const downloadButtons = document.querySelectorAll('.download-btn');
     const modal = document.getElementById('myModal');
     const closeBtn = document.querySelector('.close');
     const downloadParts = document.getElementById('downloadParts');
-    
-    if (!modal || !downloadParts) {
-      console.error('Modal elements not found in the DOM');
-      return;
-    }
-    
+
+    if (!modal || !downloadParts) return;
+
     downloadButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
+      button.addEventListener('click', function (e) {
         e.preventDefault();
         const parts = JSON.parse(this.getAttribute('data-parts'));
-        
-        // Clear previous content
         downloadParts.innerHTML = '';
-        
-        // Add each part
         parts.forEach(part => {
           const partLink = document.createElement('a');
           partLink.href = part.link;
@@ -157,113 +117,140 @@ document.addEventListener('DOMContentLoaded', function() {
           partLink.innerHTML = `${part.name} (${part.size})`;
           downloadParts.appendChild(partLink);
         });
-        
-        // Show modal
         modal.style.display = 'block';
       });
     });
-    
-    // Close modal on X click
-    if (closeBtn) {
-      closeBtn.addEventListener('click', function() {
-        modal.style.display = 'none';
-      });
-    }
-    
-    // Close modal when clicking outside
-    window.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+
+    closeBtn?.addEventListener('click', () => modal.style.display = 'none');
+    window.addEventListener('click', e => { if (e.target === modal) modal.style.display = 'none'; });
   }
-  
-  // Filter courses by search query
+
   function filterCourses(query) {
-    if (!query) {
-      renderCourses();
-      return;
-    }
-    
-    const filteredCourses = courseData.filter(course => {
-      return (
+    if (!query.trim()) {
+      filteredCoursesData = courseData;
+    } else {
+      filteredCoursesData = courseData.filter(course =>
         course.title.toLowerCase().includes(query.toLowerCase()) ||
         course.description.toLowerCase().includes(query.toLowerCase()) ||
         course.creator.toLowerCase().includes(query.toLowerCase()) ||
-        course.category.toLowerCase().includes(query.toLowerCase())
+        (typeof course.category === 'string' && course.category.toLowerCase().includes(query.toLowerCase()))
       );
-    });
-    
-    renderCourses(filteredCourses);
-  }
-  
-  // Filter courses by category
-  function filterCoursesByCategory(category) {
-    if (category === 'all') {
-      renderCourses();
-      return;
     }
-    
-    const filteredCourses = courseData.filter(course => course.category === category);
-    renderCourses(filteredCourses);
+    currentPage = 1;
+    renderCourses();
   }
-  
-  // Initialize everything
-  
-  // Load courses from JSON file
+
+  function filterCoursesByCategory(category) {
+    filteredCoursesData = (category === 'all')
+      ? courseData
+      : courseData.filter(course => Array.isArray(course.category) && course.category.includes(category));
+    currentPage = 1;
+    renderCourses();
+  }
+
+  // Load courses
   loadCourses();
-  
-  // Setup search functionality
+
+  // Search input
   const searchInput = document.getElementById('courseSearch');
-  if (searchInput) {
-    searchInput.addEventListener('input', function() {
-      filterCourses(this.value);
-    });
-  } else {
-    console.error('Could not find #courseSearch element in the DOM');
-  }
-  
-  // Setup category filter buttons
+  searchInput?.addEventListener('input', function () {
+    filterCourses(this.value);
+  });
+
+  // Category buttons
   const categoryButtons = document.querySelectorAll('.category-btn');
   categoryButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove active class from all buttons
+    button.addEventListener('click', function () {
       categoryButtons.forEach(btn => btn.classList.remove('active'));
-      
-      // Add active class to clicked button
       this.classList.add('active');
-      
-      // Filter courses
       const category = this.getAttribute('data-filter');
       filterCoursesByCategory(category);
     });
   });
-});
 
-// Dark mode toggle
-const themeToggle = document.getElementById('themeToggle');
+  // Infinite Scroll Pagination
+  window.addEventListener('scroll', () => {
+    const scrollTopBtn = document.getElementById('backToTop');
+    const loader = document.getElementById('scrollLoader');
 
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+    // Show/hide back to top button
+    scrollTopBtn?.classList.toggle('hidden', window.scrollY <= 300);
 
-    const icon = themeToggle.querySelector('i');
-    if (document.body.classList.contains('dark-mode')) {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
-    } else {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
+    // Infinite scroll
+    if (isLoadingMore) return;
+    const scrollPos = window.innerHeight + window.scrollY;
+    const threshold = document.body.offsetHeight - 200;
+
+    if (scrollPos >= threshold) {
+      const totalPages = Math.ceil(filteredCoursesData.length / itemsPerPage);
+      if (currentPage < totalPages) {
+        isLoadingMore = true;
+        loader?.classList.remove('hidden');
+
+        setTimeout(() => {
+          currentPage++;
+          renderCourses(true);
+          isLoadingMore = false;
+          loader?.classList.add('hidden');
+        }, 500);
+      }
     }
+  });
 
-    // Save preference to localStorage
-    const isDarkMode = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode);
+  // Back to Top
+  document.getElementById('backToTop')?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
 
+// Dark mode
+const themeToggle = document.getElementById('themeToggle');
+themeToggle?.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const icon = themeToggle.querySelector('i');
+  icon.classList.toggle('fa-moon');
+  icon.classList.toggle('fa-sun');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+});
 
-// Loader 
+// Loader
+window.addEventListener('load', function () {
+  document.getElementById('loaderContainer')?.classList.add('hidden');
+});
 
-window.addEventListener('load', function() {
-    // When page is fully loaded, hide the loader
-    document.getElementById('loaderContainer').classList.add('hidden');
+// Truncate
+function truncateTextByChars(text, charLimit = 100) {
+  return text.length <= charLimit ? text : text.slice(0, charLimit) + '...';
+}
+
+
+// clear form data
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contact-form');
+
+  contactForm?.addEventListener('submit', async function (e) {
+    e.preventDefault(); // prevent default form submission
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        contactForm.reset(); // Clear form fields
+      } else {
+        alert('Oops! Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('An error occurred while sending your message.');
+    }
   });
+});
