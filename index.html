@@ -150,7 +150,7 @@
                 <button class="category-btn" data-filter="java">Java</button>
                 <button class="category-btn" data-filter="python">Python</button>
                 <button class="category-btn" data-filter="devops">DevOps</button>
-                <button class="category-btn" data-filter="appium">Cypress</button>
+                <button class="category-btn" data-filter="cypress">Cypress</button>
                 <button class="category-btn" data-filter="testing">Testing</button>
                 <button class="category-btn" data-filter="UI-UX">UI-UX</button>
                 <button class="category-btn" data-filter="playwright">Playwright</button>
@@ -162,7 +162,7 @@
                 <script src="script.js"></script>
             </div>
             <!-- Loader shown during infinite scroll -->
-            <div id="scrollLoader" class="hidden">
+            <div id="scrollLoader" class="hidden" style="height: 1rem;">
                 <img src="loader_g.gif" alt="Loading..." style="margin-left: 32rem;" />
             </div>
 
@@ -264,6 +264,9 @@
                         <button type="submit" class="submit-btn">Submit</button>
                     </form>
                 </div>
+
+                <button id="backToTop" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+
             </div>
 
             <div class="footer-bottom">

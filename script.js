@@ -114,7 +114,10 @@ document.addEventListener('DOMContentLoaded', function () {
           partLink.href = part.link;
           partLink.className = 'part-link';
           partLink.target = '_blank';
-          partLink.innerHTML = `${part.name} (${part.size})`;
+          partLink.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-right: 6px;" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v3.6a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5V10.4a.5.5 0 0 1 1 0v3.6A1.5 1.5 0 0 1 14.5 15H1.5A1.5 1.5 0 0 1 0 14V10.4a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 10.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 1 0-.708-.708L8.5 9.293V1.5a.5.5 0 0 0-1 0v7.793L5.354 7.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg> ${part.name} (${part.size})`;
           downloadParts.appendChild(partLink);
         });
         modal.style.display = 'block';
@@ -167,40 +170,40 @@ document.addEventListener('DOMContentLoaded', function () {
       filterCoursesByCategory(category);
     });
   });
+// Infinite Scroll Pagination
+window.addEventListener('scroll', () => {
+  const scrollTopBtn = document.getElementById('backToTop');
+  const loader = document.getElementById('scrollLoader');
 
-  // Infinite Scroll Pagination
-  window.addEventListener('scroll', () => {
-    const scrollTopBtn = document.getElementById('backToTop');
-    const loader = document.getElementById('scrollLoader');
+  // Show/hide back to top button
+  scrollTopBtn?.classList.toggle('hidden', window.scrollY === 0);
 
-    // Show/hide back to top button
-    scrollTopBtn?.classList.toggle('hidden', window.scrollY <= 300);
+  // Infinite scroll
+  if (isLoadingMore) return;
+  const scrollPos = window.innerHeight + window.scrollY;
+  const threshold = document.body.offsetHeight - 200;
 
-    // Infinite scroll
-    if (isLoadingMore) return;
-    const scrollPos = window.innerHeight + window.scrollY;
-    const threshold = document.body.offsetHeight - 200;
+  if (scrollPos >= threshold) {
+    const totalPages = Math.ceil(filteredCoursesData.length / itemsPerPage);
+    if (currentPage < totalPages) {
+      isLoadingMore = true;
+      loader?.classList.remove('hidden');
 
-    if (scrollPos >= threshold) {
-      const totalPages = Math.ceil(filteredCoursesData.length / itemsPerPage);
-      if (currentPage < totalPages) {
-        isLoadingMore = true;
-        loader?.classList.remove('hidden');
-
-        setTimeout(() => {
-          currentPage++;
-          renderCourses(true);
-          isLoadingMore = false;
-          loader?.classList.add('hidden');
-        }, 500);
-      }
+      setTimeout(() => {
+        currentPage++;
+        renderCourses(true);
+        isLoadingMore = false;
+        loader?.classList.add('hidden');
+      }, 500);
     }
-  });
+  }
+});
 
-  // Back to Top
-  document.getElementById('backToTop')?.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+// Back to Top
+document.getElementById('backToTop')?.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 });
 
 // Dark mode
