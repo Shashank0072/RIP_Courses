@@ -388,6 +388,13 @@ header {
     transition: background-color 0.3s ease;
 }
 
+.dark-mode .category-btn{
+    background-color: #1e1e1e;
+    color: #cbcbcb;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgb(152 149 149 / 55%);
+}
+
 .category-btn.active,
 .category-btn:hover {
     background-color: #007bff;
