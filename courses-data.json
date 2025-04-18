@@ -213,6 +213,55 @@
       "parts": [
       { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
       { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+    },
+
+    {
+      "id": 14,
+      "title": "Learn JIRA with real-world examples + (Confluence bonus)",
+      "description": "Updated 2024! Learn to work on, manage, administer agile projects with this comprehensive course on JIRA and Confluence",
+      "image": "https://img-c.udemycdn.com/course/480x270/1120038_2d02_6.jpg",
+      "creator": "Kosh Sarkar (Atlassian Certified Trainer)",
+      "level": "bestseller",
+      "category": ["jira"],
+      "totalSize": "2.23 GB",
+      "comming_soon": false,
+      "is_new": true,
+      "parts": [
+      { "name": "Part 1", "size": "2.00GB", "link": "https://new17.gdtot.dad/file/2965674918011" },
+      { "name": "Part 2", "size": "0.242GB", "link": "https://new17.gdtot.dad/file/254233095" }]
+    },
+
+    {
+      "id": 15,
+      "title": "Learn Manual Software Testing with Live Project + Jira Tool",
+      "description": "Manual Testing, STLC, Agile, Jira, e-Commerce Project",
+      "image": "https://img-c.udemycdn.com/course/480x270/2144654_1c6b_7.jpg",
+      "creator": "Pavan Kumar",
+      "level": "bestseller premium",
+      "category": ["testing", "manual"],
+      "totalSize": "6.21 GB",
+      "comming_soon": true,
+      "is_new": false,
+      "parts": [
+      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
+      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+    },
+
+    {
+      "id": 16,
+      "title": "MasterClass Software Testing with Jira & Agile -Be a QA Lead",
+      "description": "Straight to the point. 2025 BEST job oriented Software Manual Testing course on real time Projects + Interview questions",
+      "image": "https://img-c.udemycdn.com/course/480x270/456460_2b1c_6.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller premium",
+      "category": ["testing", "jira", "agile"],
+      "totalSize": "2.83 GB",
+      "comming_soon": true,
+      "is_new": false,
+      "parts": [
+      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
+      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
     }
+
   ]
 }

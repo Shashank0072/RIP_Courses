@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
           levelBadges += `<span class="course-level ${levelLower}">${badgeText}</span>`;
         });
       }
-
       courseCard.innerHTML = `
         <div class="course-image">
           <img alt="${course.title}" src="${course.image}" style="height: 13rem;" />
@@ -257,3 +256,26 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// categorey button 
+const scrollContainer = document.querySelector('.course-categories');
+const leftBtn = document.querySelector('.scroll-btn.left');
+const rightBtn = document.querySelector('.scroll-btn.right');
+
+leftBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: -200, behavior: 'smooth' });
+});
+
+rightBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({ left: 200, behavior: 'smooth' });
+});
+
+
+// Hamburger menu
+
+  const hamburger = document.getElementById('mobileMenuBtn');
+  const navMenu = document.getElementById('navMenu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });

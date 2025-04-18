@@ -226,7 +226,7 @@ header {
     font-size: 20px;
     margin-bottom: 10px;
     color: var(--text-dark);
-    
+
 }
 
 .dark-mode .course-title {
@@ -279,7 +279,7 @@ header {
     color: #d84315;
 }
 
-.premium{
+.premium {
     background-color: #7800af91;
     color: #ffffff;
 }
@@ -306,7 +306,9 @@ header {
     margin-top: 20px;
 }
 
-.enroll-btn, .download-btn,.submit-btn {
+.enroll-btn,
+.download-btn,
+.submit-btn {
     background-color: var(--primary-color);
     color: white;
     padding: 8px 16px;
@@ -316,7 +318,9 @@ header {
     transition: var(--transition);
 }
 
-.enroll-btn:hover, .download-btn:hover, .submit-btn:hover {
+.enroll-btn:hover,
+.download-btn:hover,
+.submit-btn:hover {
     background-color: var(--secondary-color);
 }
 
@@ -349,35 +353,71 @@ header {
 }
 
 /* Category Buttons */
+.category-scroll-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 105px;
+}
+
 .course-categories {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
-    justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 0.5rem;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar */
+.course-categories::-webkit-scrollbar {
+    display: none;
 }
 
 .category-btn {
-    padding: 10px 20px;
-    background-color: white;
-    border: 1px solid #ababab;
-    border-radius: var(--border-radius);
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 20px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: background-color 0.3s ease;
 }
 
-.dark-mode .category-btn {
-    background-color: #1e1e1e;
-    border-color: #ffffff99;
-    color: #ffffff96;
-}
-
-.category-btn:hover,
-.category-btn.active {
-    background-color: var(--primary-color);
+.category-btn.active,
+.category-btn:hover {
+    background-color: #007bff;
     color: white;
-    border-color: var(--primary-color);
 }
+
+.scroll-btn {
+    display: none;
+    /* hidden by default */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-btn.left {
+    left: 0;
+}
+
+.scroll-btn.right {
+    right: 0;
+}
+
 
 /* Search Container */
 .search-container {
@@ -618,7 +658,7 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.dark-mode .modal-content{
+.dark-mode .modal-content {
     background-color: #000000;
     margin: 10% auto;
     padding: 20px 25px;
@@ -706,15 +746,16 @@ footer {
 
 .creator-name {
     display: inline-block;
-    max-width: 130px; /* adjust based on your layout */
+    max-width: 130px;
+    /* adjust based on your layout */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     vertical-align: middle;
-  }
-  
+}
 
-  /* Dark mode styles - applied when body has .dark-theme class */
+
+/* Dark mode styles - applied when body has .dark-theme class */
 .dark-mode .f-content {
     background-color: #000000;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.765);
@@ -735,7 +776,8 @@ footer {
 }
 
 .dark-mode .download-icon {
-    color: #5c9aff; /* Slightly lighter blue for dark mode */
+    color: #5c9aff;
+    /* Slightly lighter blue for dark mode */
 }
 
 .dark-theme .close-btn {
@@ -749,8 +791,8 @@ footer {
 
 
 /* loader */
-  /* Loader styles */
-  .loader-container {
+/* Loader styles */
+.loader-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -762,29 +804,34 @@ footer {
     align-items: center;
     z-index: 9999;
     transition: opacity 0.5s;
-  }
-  
-  .loader {
+}
+
+.loader {
     width: 60px;
     height: 60px;
     border: 8px solid #e3e3e3;
     border-top: 8px solid #4285F4;
     border-radius: 50%;
     animation: spin 1.5s linear infinite;
-  }
-  
-  .hidden {
+}
+
+.hidden {
     opacity: 0;
     pointer-events: none;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  
- 
-  .marquee-container {
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.marquee-container {
     width: 100%;
     overflow: hidden;
     /* background-color: #ffffff; */
@@ -795,33 +842,34 @@ footer {
     font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
-  }
-  
-  .marquee-content {
+}
+
+.marquee-content {
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
     animation: scroll-left 15s linear infinite;
-  }
+}
 
-  .dark-mode .marquee-container{
+.dark-mode .marquee-container {
     color: white;
     border-color: #f5f5f570;
-  }
+}
 
-  .marquee-container:hover .marquee-content {
+.marquee-container:hover .marquee-content {
     animation-play-state: paused;
-  }
-  
-  
-  @keyframes scroll-left {
+}
+
+
+@keyframes scroll-left {
     0% {
-      transform: translateX(0%);
+        transform: translateX(0%);
     }
+
     100% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
+}
 
 /*BAck TO TOP */
 #backToTop {
@@ -840,23 +888,23 @@ footer {
     z-index: 1000;
     transition: opacity 0.3s ease;
 }
-  
-  #backToTop:hover {
+
+#backToTop:hover {
     background-color: #555;
-  }
+}
 
-  .hidden {
+.hidden {
     display: none;
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 600px) {
-    .marquee-container {
-      font-size: 0.9rem;
-    }
-  }
+}
 
-  
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .marquee-container {
+        font-size: 0.9rem;
+    }
+}
+
+
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
@@ -918,7 +966,25 @@ footer {
     .footer-content {
         grid-template-columns: 1fr;
     }
-    .newbadge{
+
+    .newbadge {
         margin-right: 16rem;
     }
+
+    .scroll-btn {
+        display: contents;
+    }
+
+    .scroll-btn.left {
+        left: 0;
+    }
+
+    .scroll-btn.right {
+        right: 0;
+    }
+
+    .category-scroll-wrapper{
+        margin: 0;
+    }
+
 }
