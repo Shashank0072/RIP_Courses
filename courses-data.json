@@ -1,0 +1,266 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Selenium WebDriver with Java -Basics to Advanced+Frameworks",
+      "description": "\"TOP RATED #1 Master SELENIUM java 4 (Latest) course\" -5 Million students learning worldWide with great collaboration",
+      "image": "https://img-c.udemycdn.com/course/480x270/354176_fe73_8.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller",
+      "category": ["selenium", "testing", "java"],
+      "totalSize": "37.00 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5480378269819" },
+        { "name": "Part 2", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5471788335227" },
+        { "name": "Part 3", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5463198400635" },
+        { "name": "Part 4", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5446018531451" },
+        { "name": "Part 5", "size": "5.07GB", "link": "https://new17.gdtot.dad/file/5447889857" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Selenium Webdriver with PYTHON from Scratch + Frameworks",
+      "description": "Version 4 LATEST -Learn Python Programming & Selenium Python Automation from Basics to Advanced level + 5 LIVE Project",
+      "image": "https://img-c.udemycdn.com/course/480x270/397068_f67e_8.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller",
+      "category": ["selenium", "testing","python"],
+      "totalSize": "5.89 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "3.50GB", "link": "https://new17.gdtot.dad/file/311921999995" },
+        { "name": "Part 2", "size": "2.39GB", "link": "https://new17.gdtot.dad/file/2568159686" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "RAG-LLM Evaluation & Test Automation for Beginners",
+      "description": "Understand, Evaluate & Test RAG - LLM's (AI based Systems) from Scratch using RAGAS-Python-Pytest Framework",
+      "image": "https://img-c.udemycdn.com/course/480x270/6367439_e989_2.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller",
+      "category": ["python","ai", "testing"],
+      "totalSize": "3.56 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "2.00GB", "link": "https://new17.gdtot.dad/file/4894115233915" },
+        { "name": "Part 2", "size": "1.56GB", "link": "https://new17.gdtot.dad/file/1679924924"}
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Flutter & Dart - The Complete Guide [2025 Edition]",
+      "description": "A Complete Guide to the Flutter SDK & Flutter Framework for building native iOS and Android apps",
+      "image": "https://img-c.udemycdn.com/course/480x270/1708340_7108_5.jpg",
+      "creator": "Maximilian Schwarzmüller",
+      "level": "bestseller",
+      "category": ["mobile"],
+      "totalSize": "41.75 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5823975653499" },
+        { "name": "Part 2", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5815385718907" },
+        { "name": "Part 3", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5806795784315" },
+        { "name": "Part 4", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5789615915131" },
+        { "name": "Part 5", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5781025980539" },
+        { "name": "Part 6", "size": "1.19GB", "link": "https://new17.gdtot.dad/file/2554747813" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "DevOps Project 1 - CI/CD with Git Jenkins Ansible Kubernetes",
+      "description": "100% Hands-on labs on how to create DevOps CI/CD pipelines using Git, Jenkins, Ansible, Docker and Kubernetes on AWS",
+      "image": "https://img-c.udemycdn.com/course/480x270/2499720_13da_22.jpg",
+      "creator": "AR Shankar | Valaxy Technologies",
+      "level": "bestseller",
+      "category": ["devops"],
+      "totalSize": "2.27 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "1.20GB", "link": "https://new17.gdtot.dad/file/16750372567" },
+        { "name": "Part 2", "size": "0.80GB", "link": "https://new17.gdtot.dad/file/927621183" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Learn DevOps: The Complete Kubernetes Course",
+      "description": "Kubernetes will run and manage your containerized applications. Learn how to build, deploy, use, and maintain Kubernetes",
+      "image": "https://img-c.udemycdn.com/course/480x270/1007250_9e3c_5.jpg",
+      "creator": "Edward Viaene",
+      "level": "premium",
+      "category": ["devops"],
+      "totalSize": "3.24 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "3.00GB", "link": "https://new17.gdtot.dad/file/2644626112635" },
+        { "name": "Part 2", "size": "0.24GB", "link": "https://new17.gdtot.dad/file/249219224" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Learn DevOps: Docker, Kubernetes, Terraform and Azure DevOps",
+      "description": "DevOps for Absolute Beginners: Azure DevOps, Docker, Kubernetes, Jenkins, Terraform, Ansible - AWS, Azure & Google Cloud",
+      "image": "https://img-c.udemycdn.com/course/480x270/2813427_cc60_2.jpg",
+      "creator": "Ranga Karanam",
+      "level": "premium",
+      "category": ["devops"],
+      "totalSize": "11.03 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3418793967739" },
+        { "name": "Part 2", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3410204033147" },
+        { "name": "Part 3", "size": "2.32GB", "link": "https://new17.gdtot.dad/file/2492056964" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Complete Web & Mobile Designer: UI/UX, Figma, +more",
+      "description": "Become a UX/UI Designer! Master Mobile and Web Design, User Interface + User Experience (UI/UX Design), HTML, and CSS",
+      "image": "https://img-c.udemycdn.com/course/480x270/3227583_5e75_6.jpg",
+      "creator": "Daniel Schifano",
+      "level": "bestseller",
+      "category": ["design", "figma","UI-UX"],
+      "totalSize": "8.25 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "4.50GB", "link": "https://new17.gdtot.dad/file/922881097851" },
+        { "name": "Part 2", "size": "3.75GB", "link": "https://new17.gdtot.dad/file/4030533357" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Master Figma for Web Design & Freelancing: Learn UI/UX",
+      "description": "Learn Figma for UI work and modern web design: create beautiful responsive websites. Figma - the future of web design!",
+      "image": "https://img-c.udemycdn.com/course/480x270/4369544_6b06_2.jpg",
+      "creator": "Cristian Barin",
+      "level": "premium",
+      "category": ["design", "figma","UI-UX"],
+      "totalSize": "8.17 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+        { "name": "Part 1", "size": "5.0GB", "link": "https://new17.gdtot.dad/file/14737106534523" },
+        { "name": "Part 2", "size": "3.18GB", "link": "https://new17.gdtot.dad/file/3412589485" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Complete Web Design: from Figma to Webflow to Freelancing",
+      "description": "3 in 1 Course: Learn to design websites with Figma, build with Webflow, and make a living freelancing.",
+      "image": "https://img-c.udemycdn.com/course/480x270/2094300_ebf0_9.jpg",
+      "creator": "Vako Shvili",
+      "level": "bestseller premium",
+      "category": ["design"],
+      "totalSize": "7.91 GB",
+      "comming_soon": true,
+      "is_new": false,
+      "parts": []
+    },
+    
+    {
+      "id": 11,
+      "title": "Appium -Mobile Testing (Android/IOS) from Scratch+Frameworks",
+      "description": "[LATEST VERSION 2.0] Master on Mobile Apps Automation Testing from basics to Framework CI/CD with real time examples",
+      "image": "https://img-c.udemycdn.com/course/480x270/246314_3f1f_7.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller",
+      "category": ["testing", "appium"],
+      "totalSize": "8.63 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+      { "name": "Part 1", "size": "5.0GB", "link": "https://new17.gdtot.dad/file/16508780544123" },
+      { "name": "Part 2", "size": "3.63GB", "link": "https://new17.gdtot.dad/file/7803307427" }]
+    },
+
+    {
+      "id": 12,
+      "title": "Cypress -Modern Automation Testing from Scratch + Frameworks",
+      "description": "Learn writing fast and robust Automated (UI + Integration) Tests using Cypress V14 with Mocha and Cucumber frameworks",
+      "image": "https://img-c.udemycdn.com/course/480x270/2470214_97a0_7.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller",
+      "category": ["testing", "cypress"],
+      "totalSize": "12.02 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+      { "name": "Part 1", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3551937953915" },
+      { "name": "Part 2", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3547642986619" },
+      { "name": "Part 2", "size": "3.23GB", "link": "https://new17.gdtot.dad/file/3463283607" }]
+    },
+
+    {
+      "id": 13,
+      "title": "Playwright JS/TS Automation Testing from Scratch & Framework",
+      "description": "End to End Playwright tutorials on JavaScript & TypeScript. UI Testing, API testing, Page Objects,Cucumber, CI/CD etc",
+      "image": "https://img-c.udemycdn.com/course/480x270/4574326_d02f_3.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller",
+      "category": ["testing", "playwright"],
+      "totalSize": "6.05 GB",
+      "comming_soon": false,
+      "is_new": false,
+      "parts": [
+      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
+      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+    },
+
+    {
+      "id": 14,
+      "title": "Learn JIRA with real-world examples + (Confluence bonus)",
+      "description": "Updated 2024! Learn to work on, manage, administer agile projects with this comprehensive course on JIRA and Confluence",
+      "image": "https://img-c.udemycdn.com/course/480x270/1120038_2d02_6.jpg",
+      "creator": "Kosh Sarkar (Atlassian Certified Trainer)",
+      "level": "bestseller",
+      "category": ["jira"],
+      "totalSize": "2.23 GB",
+      "comming_soon": false,
+      "is_new": true,
+      "parts": [
+      { "name": "Part 1", "size": "2.00GB", "link": "https://new17.gdtot.dad/file/2965674918011" },
+      { "name": "Part 2", "size": "0.242GB", "link": "https://new17.gdtot.dad/file/254233095" }]
+    },
+
+    {
+      "id": 15,
+      "title": "Learn Manual Software Testing with Live Project + Jira Tool",
+      "description": "Manual Testing, STLC, Agile, Jira, e-Commerce Project",
+      "image": "https://img-c.udemycdn.com/course/480x270/2144654_1c6b_7.jpg",
+      "creator": "Pavan Kumar",
+      "level": "bestseller premium",
+      "category": ["testing", "manual"],
+      "totalSize": "6.21 GB",
+      "comming_soon": true,
+      "is_new": false,
+      "parts": [
+      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
+      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+    },
+
+    {
+      "id": 16,
+      "title": "MasterClass Software Testing with Jira & Agile -Be a QA Lead",
+      "description": "Straight to the point. 2025 BEST job oriented Software Manual Testing course on real time Projects + Interview questions",
+      "image": "https://img-c.udemycdn.com/course/480x270/456460_2b1c_6.jpg",
+      "creator": "Rahul Shetty",
+      "level": "bestseller premium",
+      "category": ["testing", "jira", "agile"],
+      "totalSize": "2.83 GB",
+      "comming_soon": true,
+      "is_new": false,
+      "parts": [
+      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
+      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+    }
+  ]
+}
