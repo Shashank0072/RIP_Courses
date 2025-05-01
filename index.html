@@ -68,6 +68,9 @@
     <link rel="icon" href="main_icon.png" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- Link to external CSS file -->
     <link rel="stylesheet" href="styles.css">
 
@@ -117,21 +120,50 @@
         </div>
     </div>
 
-
     <section class="hero" id="home">
-        <div class="container">
-            <h1>Access Premium Udemy Courses for Free</h1>
-            <p>Discover top-rated courses in programming, design, business, and more without paying a penny. Advance
-                your skills with RIP Courses.</p>
-            <a href="#courses" class="cta-button">Explore Courses</a>
+        <div class="swiper hero-swiper" style="height: 420px;">
+          <div class="swiper-wrapper">
+      
+            <!-- Slide 1 -->
+            <div class="swiper-slide banner-slide banner-blue">
+              <div class="container">
+                <h1>Access Premium Udemy Courses for Free</h1>
+                <p>Discover top-rated courses in programming, design, business, and more without paying a penny.</p>
+                <a href="#courses" class="cta-button">Explore Courses</a>
+              </div>
+            </div>
+      
+            <!-- Slide 3 (Request Rules) -->
+            <div class="swiper-slide banner-slide banner-purple">
+              <div class="banner-container">
+                <h1>Request For Course Update</h1>
+                <p>Important Rule For Course Update</p>
+                <ul>
+                  <li>🔍 Search your course before making a request.</li>
+                  <li>❌ If multiple requests are found, we won't publish your requests.</li>
+                  <li>📆 Do not request old courses (e.g., from 2016).</li>
+                  <li>👥 Request courses with <strong>at least 2000 enrolled students</strong>.</li>
+                </ul>
+                <a href="#contact" class="cta-button">Send</a>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!-- Optional navigation buttons -->
+          <div class="swiper-button-next" style="color: white;"></div>
+          <div class="swiper-button-prev" style="color: white;"></div>
+      
         </div>
-    </section>
+      </section>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>      
+
     <div class="marquee-container">
         <div class="marquee-content">
-          <span>📦 For Extracting the Course, Please use WinRAR Software.</span>
+            <span>📦 For Extracting the Course, Please use WinRAR Software.</span>
         </div>
-      </div>
-      
+    </div>
+
     <section class="section" id="courses">
         <div class="container">
             <h2 class="section-title">Our Course Library</h2>
@@ -145,25 +177,25 @@
 
             <div class="category-scroll-wrapper">
                 <button class="scroll-btn left">&#8249;</button> <!-- ‹ -->
-                
+
                 <div class="course-categories">
-                  <button class="category-btn active" data-filter="all">All</button>
-                  <button class="category-btn" data-filter="ai">AI</button>
-                  <button class="category-btn" data-filter="selenium">Selenium</button>
-                  <button class="category-btn" data-filter="agile">Agile</button>
-                  <button class="category-btn" data-filter="java">Java</button>
-                  <button class="category-btn" data-filter="python">Python</button>
-                  <button class="category-btn" data-filter="devops">DevOps</button>
-                  <button class="category-btn" data-filter="cypress">Cypress</button>
-                  <button class="category-btn" data-filter="jira">Jira</button>
-                  <button class="category-btn" data-filter="testing">Testing</button>
-                  <button class="category-btn" data-filter="UI-UX">UI-UX</button>
-                  <button class="category-btn" data-filter="playwright">Playwright</button>
+                    <button class="category-btn active" data-filter="all">All</button>
+                    <button class="category-btn" data-filter="ai">AI</button>
+                    <button class="category-btn" data-filter="selenium">Selenium</button>
+                    <button class="category-btn" data-filter="agile">Agile</button>
+                    <button class="category-btn" data-filter="java">Java</button>
+                    <button class="category-btn" data-filter="python">Python</button>
+                    <button class="category-btn" data-filter="devops">DevOps</button>
+                    <button class="category-btn" data-filter="cypress">Cypress</button>
+                    <button class="category-btn" data-filter="jira">Jira</button>
+                    <button class="category-btn" data-filter="testing">Testing</button>
+                    <button class="category-btn" data-filter="UI-UX">UI-UX</button>
+                    <button class="category-btn" data-filter="playwright">Playwright</button>
                 </div>
-                
+
                 <button class="scroll-btn right">&#8250;</button> <!-- › -->
             </div>
-              
+
 
             <div class="featured-courses">
                 <script src="courses-manager.js"></script>

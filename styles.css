@@ -133,9 +133,8 @@ header {
 
 /* Hero Section */
 .hero {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
+   
+
     text-align: center;
 }
 
@@ -144,10 +143,11 @@ header {
     margin-bottom: 20px;
 }
 
+
 .hero p {
     font-size: 20px;
     max-width: 800px;
-    margin: 0 auto 30px;
+    margin: -20px auto 30px;
 }
 
 .cta-button {
@@ -182,6 +182,47 @@ header {
 .dark-mode .section-title {
     color: var(--dark-text);
 }
+/* Banner Style */
+.banner-container ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: -0.9rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-inline: auto;
+  }
+  
+  .banner-container ul li {
+    margin-bottom: 10px;
+    padding-left: 0;
+  }
+  
+
+  .banner-slide {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .banner-blue {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    height: 27rem;
+  }
+  
+  .banner-purple {
+    background: linear-gradient(to right, #41295a, #2F0743);
+    height: 27rem;
+  }
+  
+  .banner-orange {
+    background: linear-gradient(to right, #f12711, #f5af19);
+  }
+  
+
 
 /* Course Styles */
 .featured-courses {
