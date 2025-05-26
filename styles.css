@@ -443,19 +443,24 @@ header {
 }
 
 .scroll-btn {
-    display: none;
-    /* hidden by default */
+    display: flex;
     position: absolute;
-    top: 50%;
+    top: 49%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(67 97 238);
     border: none;
     border-radius: 50%;
-    padding: 0.5rem 0.7rem;
-    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
+    padding: 0.27rem 12px  0.7rem;
+    font-size: 1.2rem;
     cursor: pointer;
     z-index: 1;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 44%);
+    flex-wrap: nowrap;
+    margin-left: -35px;
+    margin-right: -34px;
+    color: var(--dark-text);
 }
 
 .scroll-btn.left {
