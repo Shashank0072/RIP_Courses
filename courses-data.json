@@ -261,6 +261,39 @@
       "parts": [
       { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
       { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+    },
+
+    {
+      "id": 17,
+      "title": "Databricks Certified Associate Developer - Apache Spark",
+      "description": "A Step by Step Hands-on Guide to prepare for Databricks Certified Associate Developer for Apache Spark using Pyspark",
+      "image": "https://img-c.udemycdn.com/course/240x135/4460318_c419_2.jpg",
+      "creator": "Durga Viswanatha Raju Gadiraju, Pratik Kumar ",
+      "level": "bestseller",
+      "category": ["datascience"],
+      "totalSize": "4.31 GB",
+      "comming_soon": false,
+      "is_new": true,
+      "parts": [
+      { "name": "Part 1", "size": "2.0GB", "link": "https://new18.gdtot.dad/file/2763811455099" },
+      { "name": "Part 2", "size": "2.00GB", "link": "https://new18.gdtot.dad/file/2755221520507" },
+      { "name": "Part 3", "size": "0.326GB", "link": "https://new18.gdtot.dad/file/684954073" }]
+    },
+
+    {
+      "id": 18,
+      "title": "Apache Spark 3 - Databricks Certified Associate Developer",
+      "description": "Learn Apache Spark 3 With Scala & Earn the Databricks Associate Certification to prove your skills as data professional",
+      "image": "https://img-c.udemycdn.com/course/240x135/3294208_e748_11.jpg",
+      "creator": "Wadson Guimatsa",
+      "level": " premium",
+      "category": ["datascience"],
+      "totalSize": "1.87 GB",
+      "comming_soon": false,
+      "is_new": true,
+      "parts": [
+      { "name": "Part 1", "size": "0.950GB", "link": "https://new18.gdtot.dad/file/996147323" },
+      { "name": "Part 2", "size": "0.789GB", "link": "https://new18.gdtot.dad/file/827291915" }]
     }
   ]
 }
