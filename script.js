@@ -298,3 +298,34 @@ const swiper = new Swiper('.hero-swiper', {
   },
 });
 
+
+
+// Follower Section
+
+  const followBtn = document.getElementById("follow-btn");
+  const countSpan = document.getElementById("follower-count");
+
+  // Load from localStorage
+  const hasFollowed = localStorage.getItem("hasFollowed");
+  let followerCount = parseInt(localStorage.getItem("followerCount")) || 69;
+
+  if (hasFollowed === "true") {
+    followBtn.disabled = true;
+    followBtn.innerText = "Following";
+  }
+
+  countSpan.textContent = followerCount;
+
+  followBtn.addEventListener("click", () => {
+    if (localStorage.getItem("hasFollowed") !== "true") {
+      followerCount++;
+      localStorage.setItem("followerCount", followerCount);
+      localStorage.setItem("hasFollowed", "true");
+
+      countSpan.textContent = followerCount;
+      followBtn.disabled = true;
+      followBtn.innerText = "Following";
+    }
+  });
+
+

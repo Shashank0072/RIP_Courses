@@ -108,6 +108,13 @@
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
+                    <li>
+                        <div id="follower-box">
+                         <button id="follow-btn">Follow</button>
+                         <p class="follower"> <img src="follower-icon.png" alt="follower"> - <span id="follower-count">69</span></p>
+                        </div>
+
+                    </li>
 
                 </ul>
             </nav>
@@ -122,41 +129,42 @@
 
     <section class="hero" id="home">
         <div class="swiper hero-swiper" style="height: 420px;">
-          <div class="swiper-wrapper">
-      
-            <!-- Slide 1 -->
-            <div class="swiper-slide banner-slide banner-blue">
-              <div class="container">
-                <h1>Access Premium Udemy Courses for Free</h1>
-                <p>Discover top-rated courses in programming, design, business, and more without paying a penny.</p>
-                <a href="#courses" class="cta-button">Explore Courses</a>
-              </div>
+            <div class="swiper-wrapper">
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide banner-slide banner-blue">
+                    <div class="container">
+                        <h1>Access Premium Udemy Courses for Free</h1>
+                        <p>Discover top-rated courses in programming, design, business, and more without paying a penny.
+                        </p>
+                        <a href="#courses" class="cta-button">Explore Courses</a>
+                    </div>
+                </div>
+
+                <!-- Slide 3 (Request Rules) -->
+                <div class="swiper-slide banner-slide banner-purple">
+                    <div class="banner-container">
+                        <h1>Request For Course Update</h1>
+                        <p>Important Rule For Course Update</p>
+                        <ul>
+                            <li>🔍 Search your course before making a request.</li>
+                            <li>❌ If multiple requests are found, we won't publish your requests.</li>
+                            <li>📆 Do not request old courses (e.g., from 2016).</li>
+                            <li>👥 Request courses with <strong>at least 2000 enrolled students</strong>.</li>
+                        </ul>
+                        <a href="#contact" class="cta-button">Send</a>
+                    </div>
+                </div>
+
             </div>
-      
-            <!-- Slide 3 (Request Rules) -->
-            <div class="swiper-slide banner-slide banner-purple">
-              <div class="banner-container">
-                <h1>Request For Course Update</h1>
-                <p>Important Rule For Course Update</p>
-                <ul>
-                  <li>🔍 Search your course before making a request.</li>
-                  <li>❌ If multiple requests are found, we won't publish your requests.</li>
-                  <li>📆 Do not request old courses (e.g., from 2016).</li>
-                  <li>👥 Request courses with <strong>at least 2000 enrolled students</strong>.</li>
-                </ul>
-                <a href="#contact" class="cta-button">Send</a>
-              </div>
-            </div>
-      
-          </div>
-      
-          <!-- Optional navigation buttons -->
-          <div class="swiper-button-next" style="color: white;"></div>
-          <div class="swiper-button-prev" style="color: white;"></div>
-      
+
+            <!-- Optional navigation buttons -->
+            <div class="swiper-button-next" style="color: white;"></div>
+            <div class="swiper-button-prev" style="color: white;"></div>
+
         </div>
-      </section>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>      
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <div class="marquee-container">
         <div class="marquee-content">
@@ -176,7 +184,7 @@
             </div>
 
             <div class="category-scroll-wrapper">
-                <button class="scroll-btn left"><strong >&#8249;</strong></button> <!-- ‹ -->
+                <button class="scroll-btn left"><strong>&#8249;</strong></button> <!-- ‹ -->
 
                 <div class="course-categories">
                     <button class="category-btn active" data-filter="all">All</button>
@@ -253,7 +261,8 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>RIP Courses</h3>
-                    <p>🎓 Your go-to resource for free learning — access high-quality courses, tutorials, and resources to boost your career!</p>
+                    <p>🎓 Your go-to resource for free learning — access high-quality courses, tutorials, and resources
+                        to boost your career!</p>
                     <!-- <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
