@@ -294,6 +294,23 @@
       "parts": [
       { "name": "Part 1", "size": "0.950GB", "link": "https://new18.gdtot.dad/file/996147323" },
       { "name": "Part 2", "size": "0.789GB", "link": "https://new18.gdtot.dad/file/827291915" }]
+    },
+
+    {
+      "id": 19,
+      "title": "Web Security & Bug Bounty: Learn Penetration Testing",
+      "description": "SBecome a bug bounty hunter! Learn to hack websites, fix vulnerabilities, and improve web security online for clients.",
+      "image": "https://img-c.udemycdn.com/course/480x270/3985968_eafc_4.jpg",
+      "creator": "Andrei Neagoie",
+      "level": "premium",
+      "category": ["testing"],
+      "totalSize": "6.92 GB",
+      "comming_soon": false,
+      "is_new": true,
+      "parts": [
+      { "name": "Part 1", "size": "4.0GB", "link": "https://new21.gdtot.dad/file/3136054497" },
+      { "name": "Part 2", "size": "2.92GB", "link": "https://new21.gdtot.dad/file/3136054497" }]
     }
+
   ]
 }
