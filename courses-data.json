@@ -310,7 +310,26 @@
       "parts": [
       { "name": "Part 1", "size": "4.0GB", "link": "https://new21.gdtot.dad/file/3136054497" },
       { "name": "Part 2", "size": "2.92GB", "link": "https://new21.gdtot.dad/file/3136054497" }]
-    }
+    },
+     {
+      "id": 20,
+      "title": "Mastering Data Structures & Algorithms using C and C++",
+      "description": "Learn, Analyse and Implement Data Structure using C and C++. Learn Recursion and Sorting.",
+      "image": "https://img-c.udemycdn.com/course/304x171/2121018_9de5_5.jpg",
+      "creator": "Abdul Bari",
+      "level": "bestseller",
+      "category": [],
+      "totalSize": "33.00 GB",
+      "comming_soon": false,
+      "is_new": true,
+      "parts": [
+        { "name": "Part 1", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5778878496891" },
+        { "name": "Part 2", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5772436045947" },
+        { "name": "Part 3", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5759551144059" },
+        { "name": "Part 4", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5753108693115" },
+        { "name": "Part 5", "size": "5.07GB", "link": "https://new26.gdtot.dad/file/4903621689" }
+      ]
+    },
 
   ]
 }
