@@ -7,16 +7,40 @@
       "image": "https://img-c.udemycdn.com/course/480x270/354176_fe73_8.jpg",
       "creator": "Rahul Shetty",
       "level": "bestseller",
-      "category": ["selenium", "testing", "java"],
+      "category": [
+        "selenium",
+        "testing",
+        "java"
+      ],
       "totalSize": "37.00 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5480378269819" },
-        { "name": "Part 2", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5471788335227" },
-        { "name": "Part 3", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5463198400635" },
-        { "name": "Part 4", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5446018531451" },
-        { "name": "Part 5", "size": "5.07GB", "link": "https://new17.gdtot.dad/file/5447889857" }
+        {
+          "name": "Part 1",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5480378269819"
+        },
+        {
+          "name": "Part 2",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5471788335227"
+        },
+        {
+          "name": "Part 3",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5463198400635"
+        },
+        {
+          "name": "Part 4",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5446018531451"
+        },
+        {
+          "name": "Part 5",
+          "size": "5.07GB",
+          "link": "https://new17.gdtot.dad/file/5447889857"
+        }
       ]
     },
     {
@@ -26,13 +50,25 @@
       "image": "https://img-c.udemycdn.com/course/480x270/397068_f67e_8.jpg",
       "creator": "Rahul Shetty",
       "level": "bestseller",
-      "category": ["selenium", "testing","python"],
+      "category": [
+        "selenium",
+        "testing",
+        "python"
+      ],
       "totalSize": "5.89 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "3.50GB", "link": "https://new17.gdtot.dad/file/311921999995" },
-        { "name": "Part 2", "size": "2.39GB", "link": "https://new17.gdtot.dad/file/2568159686" }
+        {
+          "name": "Part 1",
+          "size": "3.50GB",
+          "link": "https://new17.gdtot.dad/file/311921999995"
+        },
+        {
+          "name": "Part 2",
+          "size": "2.39GB",
+          "link": "https://new17.gdtot.dad/file/2568159686"
+        }
       ]
     },
     {
@@ -42,13 +78,25 @@
       "image": "https://img-c.udemycdn.com/course/480x270/6367439_e989_2.jpg",
       "creator": "Rahul Shetty",
       "level": "bestseller",
-      "category": ["python","ai", "testing"],
+      "category": [
+        "python",
+        "ai",
+        "testing"
+      ],
       "totalSize": "3.56 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "2.00GB", "link": "https://new17.gdtot.dad/file/4894115233915" },
-        { "name": "Part 2", "size": "1.56GB", "link": "https://new17.gdtot.dad/file/1679924924"}
+        {
+          "name": "Part 1",
+          "size": "2.00GB",
+          "link": "https://new17.gdtot.dad/file/4894115233915"
+        },
+        {
+          "name": "Part 2",
+          "size": "1.56GB",
+          "link": "https://new17.gdtot.dad/file/1679924924"
+        }
       ]
     },
     {
@@ -58,17 +106,43 @@
       "image": "https://img-c.udemycdn.com/course/480x270/1708340_7108_5.jpg",
       "creator": "Maximilian Schwarzmüller",
       "level": "bestseller",
-      "category": ["mobile"],
+      "category": [
+        "mobile"
+      ],
       "totalSize": "41.75 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5823975653499" },
-        { "name": "Part 2", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5815385718907" },
-        { "name": "Part 3", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5806795784315" },
-        { "name": "Part 4", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5789615915131" },
-        { "name": "Part 5", "size": "8.00GB", "link": "https://new17.gdtot.dad/file/5781025980539" },
-        { "name": "Part 6", "size": "1.19GB", "link": "https://new17.gdtot.dad/file/2554747813" }
+        {
+          "name": "Part 1",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5823975653499"
+        },
+        {
+          "name": "Part 2",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5815385718907"
+        },
+        {
+          "name": "Part 3",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5806795784315"
+        },
+        {
+          "name": "Part 4",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5789615915131"
+        },
+        {
+          "name": "Part 5",
+          "size": "8.00GB",
+          "link": "https://new17.gdtot.dad/file/5781025980539"
+        },
+        {
+          "name": "Part 6",
+          "size": "1.19GB",
+          "link": "https://new17.gdtot.dad/file/2554747813"
+        }
       ]
     },
     {
@@ -78,13 +152,23 @@
       "image": "https://img-c.udemycdn.com/course/480x270/2499720_13da_22.jpg",
       "creator": "AR Shankar | Valaxy Technologies",
       "level": "bestseller",
-      "category": ["devops"],
+      "category": [
+        "devops"
+      ],
       "totalSize": "2.27 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "1.20GB", "link": "https://new17.gdtot.dad/file/16750372567" },
-        { "name": "Part 2", "size": "0.80GB", "link": "https://new17.gdtot.dad/file/927621183" }
+        {
+          "name": "Part 1",
+          "size": "1.20GB",
+          "link": "https://new17.gdtot.dad/file/16750372567"
+        },
+        {
+          "name": "Part 2",
+          "size": "0.80GB",
+          "link": "https://new17.gdtot.dad/file/927621183"
+        }
       ]
     },
     {
@@ -94,13 +178,23 @@
       "image": "https://img-c.udemycdn.com/course/480x270/1007250_9e3c_5.jpg",
       "creator": "Edward Viaene",
       "level": "premium",
-      "category": ["devops"],
+      "category": [
+        "devops"
+      ],
       "totalSize": "3.24 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "3.00GB", "link": "https://new17.gdtot.dad/file/2644626112635" },
-        { "name": "Part 2", "size": "0.24GB", "link": "https://new17.gdtot.dad/file/249219224" }
+        {
+          "name": "Part 1",
+          "size": "3.00GB",
+          "link": "https://new17.gdtot.dad/file/2644626112635"
+        },
+        {
+          "name": "Part 2",
+          "size": "0.24GB",
+          "link": "https://new17.gdtot.dad/file/249219224"
+        }
       ]
     },
     {
@@ -110,14 +204,28 @@
       "image": "https://img-c.udemycdn.com/course/480x270/2813427_cc60_2.jpg",
       "creator": "Ranga Karanam",
       "level": "premium",
-      "category": ["devops"],
+      "category": [
+        "devops"
+      ],
       "totalSize": "11.03 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3418793967739" },
-        { "name": "Part 2", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3410204033147" },
-        { "name": "Part 3", "size": "2.32GB", "link": "https://new17.gdtot.dad/file/2492056964" }
+        {
+          "name": "Part 1",
+          "size": "4.00GB",
+          "link": "https://new17.gdtot.dad/file/3418793967739"
+        },
+        {
+          "name": "Part 2",
+          "size": "4.00GB",
+          "link": "https://new17.gdtot.dad/file/3410204033147"
+        },
+        {
+          "name": "Part 3",
+          "size": "2.32GB",
+          "link": "https://new17.gdtot.dad/file/2492056964"
+        }
       ]
     },
     {
@@ -127,13 +235,25 @@
       "image": "https://img-c.udemycdn.com/course/480x270/3227583_5e75_6.jpg",
       "creator": "Daniel Schifano",
       "level": "bestseller",
-      "category": ["design", "figma","UI-UX"],
+      "category": [
+        "design",
+        "figma",
+        "UI-UX"
+      ],
       "totalSize": "8.25 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "4.50GB", "link": "https://new17.gdtot.dad/file/922881097851" },
-        { "name": "Part 2", "size": "3.75GB", "link": "https://new17.gdtot.dad/file/4030533357" }
+        {
+          "name": "Part 1",
+          "size": "4.50GB",
+          "link": "https://new17.gdtot.dad/file/922881097851"
+        },
+        {
+          "name": "Part 2",
+          "size": "3.75GB",
+          "link": "https://new17.gdtot.dad/file/4030533357"
+        }
       ]
     },
     {
@@ -143,13 +263,25 @@
       "image": "https://img-c.udemycdn.com/course/480x270/4369544_6b06_2.jpg",
       "creator": "Cristian Barin",
       "level": "premium",
-      "category": ["design", "figma","UI-UX"],
+      "category": [
+        "design",
+        "figma",
+        "UI-UX"
+      ],
       "totalSize": "8.17 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-        { "name": "Part 1", "size": "5.0GB", "link": "https://new17.gdtot.dad/file/14737106534523" },
-        { "name": "Part 2", "size": "3.18GB", "link": "https://new17.gdtot.dad/file/3412589485" }
+        {
+          "name": "Part 1",
+          "size": "5.0GB",
+          "link": "https://new17.gdtot.dad/file/14737106534523"
+        },
+        {
+          "name": "Part 2",
+          "size": "3.18GB",
+          "link": "https://new17.gdtot.dad/file/3412589485"
+        }
       ]
     },
     {
@@ -159,13 +291,14 @@
       "image": "https://img-c.udemycdn.com/course/480x270/2094300_ebf0_9.jpg",
       "creator": "Vako Shvili",
       "level": "bestseller premium",
-      "category": ["design"],
+      "category": [
+        "design"
+      ],
       "totalSize": "7.91 GB",
       "comming_soon": true,
       "is_new": false,
       "parts": []
     },
-    
     {
       "id": 11,
       "title": "Appium -Mobile Testing (Android/IOS) from Scratch+Frameworks",
@@ -173,15 +306,26 @@
       "image": "https://img-c.udemycdn.com/course/480x270/246314_3f1f_7.jpg",
       "creator": "Rahul Shetty",
       "level": "bestseller",
-      "category": ["testing", "appium"],
+      "category": [
+        "testing",
+        "appium"
+      ],
       "totalSize": "8.63 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-      { "name": "Part 1", "size": "5.0GB", "link": "https://new17.gdtot.dad/file/16508780544123" },
-      { "name": "Part 2", "size": "3.63GB", "link": "https://new17.gdtot.dad/file/7803307427" }]
+        {
+          "name": "Part 1",
+          "size": "5.0GB",
+          "link": "https://new17.gdtot.dad/file/16508780544123"
+        },
+        {
+          "name": "Part 2",
+          "size": "3.63GB",
+          "link": "https://new17.gdtot.dad/file/7803307427"
+        }
+      ]
     },
-
     {
       "id": 12,
       "title": "Cypress -Modern Automation Testing from Scratch + Frameworks",
@@ -189,16 +333,31 @@
       "image": "https://img-c.udemycdn.com/course/480x270/2470214_97a0_7.jpg",
       "creator": "Rahul Shetty",
       "level": "bestseller",
-      "category": ["testing", "cypress"],
+      "category": [
+        "testing",
+        "cypress"
+      ],
       "totalSize": "12.02 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-      { "name": "Part 1", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3551937953915" },
-      { "name": "Part 2", "size": "4.00GB", "link": "https://new17.gdtot.dad/file/3547642986619" },
-      { "name": "Part 2", "size": "3.23GB", "link": "https://new17.gdtot.dad/file/3463283607" }]
+        {
+          "name": "Part 1",
+          "size": "4.00GB",
+          "link": "https://new17.gdtot.dad/file/3551937953915"
+        },
+        {
+          "name": "Part 2",
+          "size": "4.00GB",
+          "link": "https://new17.gdtot.dad/file/3547642986619"
+        },
+        {
+          "name": "Part 2",
+          "size": "3.23GB",
+          "link": "https://new17.gdtot.dad/file/3463283607"
+        }
+      ]
     },
-
     {
       "id": 13,
       "title": "Playwright JS/TS Automation Testing from Scratch & Framework",
@@ -206,15 +365,26 @@
       "image": "https://img-c.udemycdn.com/course/480x270/4574326_d02f_3.jpg",
       "creator": "Rahul Shetty",
       "level": "bestseller",
-      "category": ["testing", "playwright"],
+      "category": [
+        "testing",
+        "playwright"
+      ],
       "totalSize": "6.05 GB",
       "comming_soon": false,
       "is_new": false,
       "parts": [
-      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
-      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+        {
+          "name": "Part 1",
+          "size": "4.0GB",
+          "link": "https://new17.gdtot.dad/file/3508988280955"
+        },
+        {
+          "name": "Part 2",
+          "size": "1.59GB",
+          "link": "https://new17.gdtot.dad/file/1705390020"
+        }
+      ]
     },
-
     {
       "id": 14,
       "title": "Learn JIRA with real-world examples + (Confluence bonus)",
@@ -222,15 +392,25 @@
       "image": "https://img-c.udemycdn.com/course/480x270/1120038_2d02_6.jpg",
       "creator": "Kosh Sarkar (Atlassian Certified Trainer)",
       "level": "bestseller",
-      "category": ["jira"],
+      "category": [
+        "jira"
+      ],
       "totalSize": "2.23 GB",
       "comming_soon": false,
       "is_new": true,
       "parts": [
-      { "name": "Part 1", "size": "2.00GB", "link": "https://new17.gdtot.dad/file/2965674918011" },
-      { "name": "Part 2", "size": "0.242GB", "link": "https://new17.gdtot.dad/file/254233095" }]
+        {
+          "name": "Part 1",
+          "size": "2.00GB",
+          "link": "https://new17.gdtot.dad/file/2965674918011"
+        },
+        {
+          "name": "Part 2",
+          "size": "0.242GB",
+          "link": "https://new17.gdtot.dad/file/254233095"
+        }
+      ]
     },
-
     {
       "id": 15,
       "title": "Learn Manual Software Testing with Live Project + Jira Tool",
@@ -238,15 +418,26 @@
       "image": "https://img-c.udemycdn.com/course/480x270/2144654_1c6b_7.jpg",
       "creator": "Pavan Kumar",
       "level": "bestseller premium",
-      "category": ["testing", "manual"],
+      "category": [
+        "testing",
+        "manual"
+      ],
       "totalSize": "6.21 GB",
       "comming_soon": true,
       "is_new": false,
       "parts": [
-      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
-      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+        {
+          "name": "Part 1",
+          "size": "4.0GB",
+          "link": "https://new17.gdtot.dad/file/3508988280955"
+        },
+        {
+          "name": "Part 2",
+          "size": "1.59GB",
+          "link": "https://new17.gdtot.dad/file/1705390020"
+        }
+      ]
     },
-
     {
       "id": 16,
       "title": "MasterClass Software Testing with Jira & Agile -Be a QA Lead",
@@ -254,15 +445,27 @@
       "image": "https://img-c.udemycdn.com/course/480x270/456460_2b1c_6.jpg",
       "creator": "Rahul Shetty",
       "level": "bestseller premium",
-      "category": ["testing", "jira", "agile"],
+      "category": [
+        "testing",
+        "jira",
+        "agile"
+      ],
       "totalSize": "2.83 GB",
       "comming_soon": true,
       "is_new": false,
       "parts": [
-      { "name": "Part 1", "size": "4.0GB", "link": "https://new17.gdtot.dad/file/3508988280955" },
-      { "name": "Part 2", "size": "1.59GB", "link": "https://new17.gdtot.dad/file/1705390020" }]
+        {
+          "name": "Part 1",
+          "size": "4.0GB",
+          "link": "https://new17.gdtot.dad/file/3508988280955"
+        },
+        {
+          "name": "Part 2",
+          "size": "1.59GB",
+          "link": "https://new17.gdtot.dad/file/1705390020"
+        }
+      ]
     },
-
     {
       "id": 17,
       "title": "Databricks Certified Associate Developer - Apache Spark",
@@ -270,16 +473,30 @@
       "image": "https://img-c.udemycdn.com/course/240x135/4460318_c419_2.jpg",
       "creator": "Durga Viswanatha Raju Gadiraju, Pratik Kumar ",
       "level": "bestseller",
-      "category": ["datascience"],
+      "category": [
+        "datascience"
+      ],
       "totalSize": "4.31 GB",
       "comming_soon": false,
       "is_new": true,
       "parts": [
-      { "name": "Part 1", "size": "2.0GB", "link": "https://new18.gdtot.dad/file/2763811455099" },
-      { "name": "Part 2", "size": "2.00GB", "link": "https://new18.gdtot.dad/file/2755221520507" },
-      { "name": "Part 3", "size": "0.326GB", "link": "https://new18.gdtot.dad/file/684954073" }]
+        {
+          "name": "Part 1",
+          "size": "2.0GB",
+          "link": "https://new18.gdtot.dad/file/2763811455099"
+        },
+        {
+          "name": "Part 2",
+          "size": "2.00GB",
+          "link": "https://new18.gdtot.dad/file/2755221520507"
+        },
+        {
+          "name": "Part 3",
+          "size": "0.326GB",
+          "link": "https://new18.gdtot.dad/file/684954073"
+        }
+      ]
     },
-
     {
       "id": 18,
       "title": "Apache Spark 3 - Databricks Certified Associate Developer",
@@ -287,15 +504,25 @@
       "image": "https://img-c.udemycdn.com/course/240x135/3294208_e748_11.jpg",
       "creator": "Wadson Guimatsa",
       "level": " premium",
-      "category": ["datascience"],
+      "category": [
+        "datascience"
+      ],
       "totalSize": "1.87 GB",
       "comming_soon": false,
       "is_new": true,
       "parts": [
-      { "name": "Part 1", "size": "0.950GB", "link": "https://new18.gdtot.dad/file/996147323" },
-      { "name": "Part 2", "size": "0.789GB", "link": "https://new18.gdtot.dad/file/827291915" }]
+        {
+          "name": "Part 1",
+          "size": "0.950GB",
+          "link": "https://new18.gdtot.dad/file/996147323"
+        },
+        {
+          "name": "Part 2",
+          "size": "0.789GB",
+          "link": "https://new18.gdtot.dad/file/827291915"
+        }
+      ]
     },
-
     {
       "id": 19,
       "title": "Web Security & Bug Bounty: Learn Penetration Testing",
@@ -303,15 +530,26 @@
       "image": "https://img-c.udemycdn.com/course/480x270/3985968_eafc_4.jpg",
       "creator": "Andrei Neagoie",
       "level": "premium",
-      "category": ["testing"],
+      "category": [
+        "testing"
+      ],
       "totalSize": "6.92 GB",
       "comming_soon": false,
       "is_new": true,
       "parts": [
-      { "name": "Part 1", "size": "4.0GB", "link": "https://new21.gdtot.dad/file/3136054497" },
-      { "name": "Part 2", "size": "2.92GB", "link": "https://new21.gdtot.dad/file/3136054497" }]
+        {
+          "name": "Part 1",
+          "size": "4.0GB",
+          "link": "https://new21.gdtot.dad/file/3136054497"
+        },
+        {
+          "name": "Part 2",
+          "size": "2.92GB",
+          "link": "https://new21.gdtot.dad/file/3136054497"
+        }
+      ]
     },
-     {
+    {
       "id": 20,
       "title": "Mastering Data Structures & Algorithms using C and C++",
       "description": "Learn, Analyse and Implement Data Structure using C and C++. Learn Recursion and Sorting.",
@@ -323,13 +561,32 @@
       "comming_soon": false,
       "is_new": true,
       "parts": [
-        { "name": "Part 1", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5778878496891" },
-        { "name": "Part 2", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5772436045947" },
-        { "name": "Part 3", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5759551144059" },
-        { "name": "Part 4", "size": "8.00GB", "link": "https://new26.gdtot.dad/file/5753108693115" },
-        { "name": "Part 5", "size": "5.07GB", "link": "https://new26.gdtot.dad/file/4903621689" }
+        {
+          "name": "Part 1",
+          "size": "8.00GB",
+          "link": "https://new26.gdtot.dad/file/5778878496891"
+        },
+        {
+          "name": "Part 2",
+          "size": "8.00GB",
+          "link": "https://new26.gdtot.dad/file/5772436045947"
+        },
+        {
+          "name": "Part 3",
+          "size": "8.00GB",
+          "link": "https://new26.gdtot.dad/file/5759551144059"
+        },
+        {
+          "name": "Part 4",
+          "size": "8.00GB",
+          "link": "https://new26.gdtot.dad/file/5753108693115"
+        },
+        {
+          "name": "Part 5",
+          "size": "5.07GB",
+          "link": "https://new26.gdtot.dad/file/4903621689"
+        }
       ]
-    },
-
+    }
   ]
 }
